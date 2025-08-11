@@ -1,0 +1,191 @@
+/* @import "tailwindcss"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* CSS Custom Properties for Healthcare Theme */
+:root {
+  --primary-blue: #1e40af;
+  --primary-blue-light: #3b82f6;
+  --primary-blue-dark: #1e3a8a;
+  --secondary-teal: #0d9488;
+  --secondary-teal-light: #14b8a6;
+  --accent-green: #059669;
+  --accent-amber: #d97706;
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
+  --success-green: #10b981;
+  --warning-amber: #f59e0b;
+  --error-red: #ef4444;
+}
+
+body {
+  @apply bg-gradient-to-br from-slate-50 to-blue-50 font-sans text-slate-800 antialiased;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Container Styles */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+}
+
+/* Card Components */
+.card {
+  @apply bg-white/90 backdrop-blur-sm shadow-xl rounded-2xl p-6 border border-slate-200/50 
+         transition-all duration-300 hover:shadow-2xl hover:-translate-y-1;
+}
+
+.card-primary {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200/50;
+}
+
+.card-success {
+  @apply bg-gradient-to-br from-emerald-50 to-teal-50 border-emerald-200/50;
+}
+
+.card-warning {
+  @apply bg-gradient-to-br from-amber-50 to-orange-50 border-amber-200/50;
+}
+
+.card-info {
+  @apply bg-gradient-to-br from-cyan-50 to-sky-50 border-cyan-200/50;
+}
+
+/* Button Styles */
+.button {
+  @apply bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl 
+         font-semibold text-lg shadow-lg hover:from-blue-700 hover:to-blue-800 
+         transition-all duration-300 transform hover:scale-105 hover:shadow-xl
+         focus:outline-none focus:ring-4 focus:ring-blue-300/50;
+}
+
+.button-secondary {
+  @apply bg-gradient-to-r from-teal-600 to-teal-700 text-white px-6 py-3 rounded-lg 
+         font-medium shadow-md hover:from-teal-700 hover:to-teal-800 
+         transition-all duration-300 hover:shadow-lg;
+}
+
+.button-outline {
+  @apply border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium 
+         hover:bg-blue-600 hover:text-white transition-all duration-300 
+         hover:shadow-lg;
+}
+
+/* Typography */
+.header {
+  @apply text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-900 via-blue-800 to-teal-700 
+         bg-clip-text text-transparent mb-6 leading-tight;
+}
+
+.subheader {
+  @apply text-2xl font-semibold text-slate-700 mb-4;
+}
+
+.subheader-primary {
+  @apply text-2xl font-semibold text-blue-800 mb-4;
+}
+
+.text-medical {
+  @apply text-slate-600 leading-relaxed;
+}
+
+/* Medical/Healthcare Specific Components */
+.metric-card {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-100 p-5 rounded-xl border border-blue-200/50 
+         shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+.metric-value {
+  @apply text-2xl font-bold text-blue-800;
+}
+
+.metric-label {
+  @apply text-sm font-medium text-blue-600 uppercase tracking-wide;
+}
+
+.abnormality-item {
+  @apply bg-red-50 border border-red-200 rounded-lg p-4 mb-3 
+         shadow-sm hover:shadow-md transition-shadow;
+}
+
+.recommendation-card {
+  @apply bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 
+         rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+/* Progress Indicators */
+.progress-bar {
+  @apply w-full bg-slate-200 rounded-full h-3 overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full bg-gradient-to-r from-blue-500 to-teal-500 transition-all duration-500;
+}
+
+/* Status Indicators */
+.status-normal {
+  @apply text-emerald-600 bg-emerald-100 px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.status-mild {
+  @apply text-amber-700 bg-amber-100 px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.status-moderate {
+  @apply text-orange-700 bg-orange-100 px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.status-severe {
+  @apply text-red-700 bg-red-100 px-3 py-1 rounded-full text-sm font-medium;
+}
+
+/* Chart Enhancements */
+.chart-container {
+  @apply bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200/50;
+}
+
+/* Accessibility Improvements */
+.focus-ring {
+  @apply focus:outline-none focus:ring-4 focus:ring-blue-300/50 focus:ring-offset-2;
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .container {
+    @apply px-3 py-6;
+  }
+  
+  .header {
+    @apply text-3xl;
+  }
+  
+  .card {
+    @apply p-4;
+  }
+
+}

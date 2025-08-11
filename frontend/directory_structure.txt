@@ -1,0 +1,24 @@
+ Volume in drive D is Volume
+ Volume Serial Number is 749E-E2D3
+
+ Directory of D:\GaitXpert1.2\frontend
+
+08-08-2025  18:26    <DIR>          .
+08-08-2025  18:24    <DIR>          ..
+08-08-2025  16:51               480 .gitignore
+08-08-2025  18:20    <DIR>          .next
+08-08-2025  18:26                 0 directory_structure.txt
+08-08-2025  16:51               393 eslint.config.mjs
+08-08-2025  16:51               213 next-env.d.ts
+08-08-2025  16:51               158 next.config.ts
+08-08-2025  17:46    <DIR>          node_modules
+08-08-2025  16:54           231,627 package-lock.json
+08-08-2025  18:18               692 package.json
+08-08-2025  16:51                81 postcss.config.mjs
+08-08-2025  17:46    <DIR>          public
+08-08-2025  16:51             1,900 README.md
+08-08-2025  17:46    <DIR>          src
+08-08-2025  18:10             1,440 tailwind.config.js
+08-08-2025  16:51               516 tsconfig.json
+              11 File(s)        237,500 bytes
+               6 Dir(s)  22,856,065,024 bytes free
